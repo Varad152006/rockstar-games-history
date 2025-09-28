@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockstar Games: A Legacy of Gaming Excellence (1999-2026)</title>
+    <script>
+           
+        alert("Welcome to Rockstar Games Legacy!!!")
+    </script>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgb(30, 30, 30) 0%, rgb(45, 45, 45) 100%);
+            margin: 40px 0 60px 0;
+            border-radius: 20px;
+            border: 1px solid rgb(60, 60, 60);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgb(80, 80, 80);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(120, 120, 120);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover {
+            border-color: rgb(255, 255, 0);
+            background: rgba(255, 255, 0, 0.1);
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            font-family: 'Orbitron', 'Arial Black', 'Helvetica', sans-serif;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            color: rgb(255, 255, 0);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgb(255, 255, 255);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgb(80, 80, 80), rgb(120, 120, 120));
+            border-radius: 1px;
+        }
+
+        .game-card {
+            display: flex;
+            margin: 80px 0;
+            position: relative;
+            align-items: stretch;
+            gap: 40px;
+        }
+
+        .game-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .game-content {
+            flex: 1;
+            background: rgb(25, 25, 25);
+            border: 1px solid rgb(50, 50, 50);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            backdrop-filter: blur(20px);
+        }
+
+        .game-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, rgb(100, 100, 100), rgb(140, 140, 140));
+            border-radius: 16px 16px 0 0;
+        }
+
+        .game-content:hover {
+            transform: translateY(-8px);
+            border-color: rgb(80, 80, 80);
+            background: rgb(30, 30, 30);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .game-image img {
+            max-width: 100%;
+            max-height: 320px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .placeholder-image {
+            width: 100%;
+            height: 260px;
+            background: linear-gradient(135deg, rgb(40, 40, 40), rgb(60, 60, 60));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(120, 120, 120);
+            font-size: 0.9rem;
+            font-weight: 300;
+            border: 1px solid rgb(70, 70, 70);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .year-badge {
+            background: rgb(35, 35, 35);
+            color: rgb(220, 220, 220);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 2px solid rgb(80, 80, 80);
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .game-title {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Orbitron', 'Arial Black', sans-serif;
+            margin-bottom: 20px;
+            color: rgb(255, 255, 0);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .developer {
+            background: rgb(40, 40, 40);
+            color: rgb(180, 180, 180);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgb(60, 60, 60);
+            letter-spacing: 0.3px;
+        }
+
+        .game-description {
+            margin-bottom: 25px;
+            color: rgb(190, 190, 190);
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .description-content {
+            transition: all 0.3s ease;
+        }
+
+        .description-preview {
+            max-height: 80px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .description-preview::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(transparent, rgb(25, 25, 25));
+        }
+
+        .description-full {
+            max-height: none;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: rgb(255, 255, 0);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: underline;
+            margin-top: 10px;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            color: rgb(255, 255, 150);
+            text-shadow: 0 0 5px rgba(255, 255, 0, 0.3);
+        }
+
+        .coming-soon {
+            background: linear-gradient(45deg, rgb(220, 180, 50), rgb(240, 200, 70));
+            color: rgb(20, 20, 20);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .stat-item {
+            background: rgb(35, 35, 35);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgb(55, 55, 55);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-item:hover {
+            background: rgb(40, 40, 40);
+            border-color: rgb(70, 70, 70);
+            transform: translateY(-2px);
+        }
+
+        .stat-item.clickable:hover {
+            border-color: rgb(255, 255, 0);
+            box-shadow: 0 4px 12px rgba(255, 255, 0, 0.2);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: rgb(140, 140, 140);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: rgb(200, 200, 200);
+            font-size: 0.9rem;
+        }
+
+        .character-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgb(20, 20, 20);
+            border-radius: 10px;
+            border: 1px solid rgb(40, 40, 40);
+        }
+
+        .character-title {
+            color: rgb(255, 255, 0);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .character-info {
+            color: rgb(180, 180, 180);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .character-info strong {
+            color: rgb(220, 220, 220);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            padding: 60px 40px;
+            background: rgb(20, 20, 20);
+            border-radius: 20px;
+            border: 1px solid rgb(50, 50, 50);
+        }
+
+        footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: rgb(220, 220, 220);
+            font-weight: 400;
+        }
+
+        footer p {
+            color: rgb(160, 160, 160);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        footer p:last-child {
+            color: rgb(120, 120, 120);
+            font-size: 0.85rem;
+            margin-top: 30px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            .game-card {
+                gap: 30px;
+                margin: 60px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .game-card {
+                flex-direction: column !important;
+                margin-left: 50px;
+                gap: 20px;
+            }
+
+            .game-content,
+            .game-image {
+                flex: none;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+
+            .game-title {
+                font-size: 1.6rem;
+            }
+
+            .game-content {
+                padding: 30px 25px;
+            }
+
+            header {
+                padding: 60px 20px;
+                margin: 20px 0 40px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .game-content {
+                padding: 25px 20px;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: rgba(120, 120, 120, 0.3);
+            color: rgb(240, 240, 240);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <svg width="100" height="100" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="10" width="180" height="180" rx="30" ry="30" fill="url(#orangeGrad)" stroke="#000" stroke-width="3"/>
+                    <path d="M40 60 L40 160 L50 160 L50 110 L80 110 L80 120 L90 120 L90 130 L100 130 L100 140 L110 140 L110 150 L120 150 L120 160 L130 160 L130 150 L120 150 L120 140 L110 140 L110 130 L100 130 L100 120 L90 120 L90 110 L100 110 L100 100 L110 100 L110 90 L120 90 L120 80 L110 80 L110 70 L100 70 L100 60 L40 60 Z M50 70 L90 70 L90 80 L100 80 L100 90 L90 90 L90 100 L50 100 L50 70 Z" fill="#000"/>
+                    <polygon points="150,80 155,95 170,95 158,105 163,120 150,110 137,120 142,105 130,95 145,95" fill="#FFF" stroke="#000" stroke-width="2"/>
+                </svg>
+            </div>
+            <h1>ROCKSTAR GAMES</h1>
+            <p class="subtitle">A Legacy of Gaming Excellence (1999-2026)</p>
+        </header>
+
+        <div class="timeline">
+            <!-- GTA 1 (1997) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">1997</div>
+                    <h2 class="game-title">Grand Theft Auto</h2>
+                    <div class="developer">Developer: DMA Design (now Rockstar North)</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="The revolutionary top-down open-world crime game that established the foundation for one of gaming's most iconic franchises." data-full="The revolutionary top-down open-world crime game that established the foundation for one of gaming's most iconic franchises. Set across three fictional cities - Liberty City, Vice City, and San Andreas - it introduced the concept of complete player freedom in a criminal sandbox. Players could steal cars, engage in shootouts, and explore without linear mission constraints. The game's controversial themes and innovative gameplay mechanics laid the groundwork for what would become one of the most successful and influential video game series in history. Its impact on the gaming industry cannot be overstated, as it pioneered the open-world crime genre that many games still emulate today.<div class='character-section'><div class='character-title'>Game Information</div><div class='character-info'><strong>Protagonist:</strong> Unnamed silent protagonist</div><div class='character-info'><strong>Setting:</strong> Three fictional cities based on real locations</div><div class='character-info'><strong>Notable Features:</strong> First open-world crime game, multiple cities, vehicle variety</div></div>">
+                            The revolutionary top-down open-world crime game that established the foundation for one of gaming's most iconic franchises.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PC gaming')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PC, PlayStation</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Action game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Action/Crime</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">2+ Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">Open World Genre</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="images/gta1image.png" alt="Grand Theft Auto 1 Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GTA 2 (1999) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">1999</div>
+                    <h2 class="game-title">Grand Theft Auto 2</h2>
+                    <div class="developer">Developer: DMA Design (now Rockstar North)</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="Enhanced sequel featuring improved graphics, refined gameplay mechanics, and a futuristic setting." data-full="Enhanced sequel featuring improved graphics, refined gameplay mechanics, and a futuristic setting. Introduced gang reputation systems and more diverse mission structures while maintaining the signature top-down perspective. Set in the near future, the game featured three main areas and introduced the concept of gang loyalty, where players' actions would affect their standing with different criminal organizations. The game expanded on the original's formula with better AI, more vehicle types, and enhanced destruction effects. It served as an important stepping stone between the classic 2D GTA games and the revolutionary 3D entries that would follow.<div class='character-section'><div class='character-title'>Game Information</div><div class='character-info'><strong>Protagonist:</strong> Claude Speed (unnamed in game)</div><div class='character-info'><strong>Setting:</strong> Anywhere City in the near future (2013)</div><div class='character-info'><strong>Gangs:</strong> Zaibatsu Corporation, Loonies, Yakuza, Rednecks</div><div class='character-info'><strong>Notable Features:</strong> Gang reputation system, futuristic setting, enhanced graphics</div></div>">
+                            Enhanced sequel featuring improved graphics, refined gameplay mechanics, and a futuristic setting.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation (console)')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">Multi-platform</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Action game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Action/Crime</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">2.5+ Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">Gang Reputation</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_2.png" alt="Grand Theft Auto 2 Image">
+                </div>
+                </div> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with other games... -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2001</div>
+                    <h2 class="game-title">Grand Theft Auto III</h2>
+                    <div class="developer">Developer: Rockstar North</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="The game that revolutionized open-world gaming forever." data-full="The game that revolutionized open-world gaming forever. Transitioning to full 3D, it set new standards for player freedom and immersive storytelling in Liberty City. A cultural phenomenon that redefined what video games could achieve. The game introduced unprecedented levels of interactivity, allowing players to hijack vehicles, engage with NPCs, and explore a living, breathing city. Its cinematic approach to storytelling, combined with memorable characters and missions, elevated video games to a new level of mainstream acceptance.<div class='character-section'><div class='character-title'>Characters & Story</div><div class='character-info'><strong>Protagonist:</strong> Claude (silent protagonist)</div><div class='character-info'><strong>Key Characters:</strong> Catalina (ex-girlfriend), 8-Ball (explosives expert), Luigi Goterelli</div><div class='character-info'><strong>Setting:</strong> Liberty City (based on New York City)</div><div class='character-info'><strong>Plot:</strong> Betrayed during a bank heist, Claude seeks revenge while working for various crime families</div></div>">
+                            The game that revolutionized open-world gaming forever.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 2')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PS2, PC, Xbox</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Open world')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Open World</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">17+ Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">3D Open World</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_3.png" alt="Grand Theft Auto III">
+                    <div></div>
+                </div>
+            </div>
+
+            <!-- Vice City (2002) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2002</div>
+                    <h2 class="game-title">Grand Theft Auto: Vice City</h2>
+                    <div class="developer">Developer: Rockstar North</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="A nostalgic journey through 1980s Miami-inspired Vice City with vibrant neon aesthetics and Tommy Vercetti's rise to power." data-full="A nostalgic journey through 1980s Miami-inspired Vice City. Featuring vibrant neon aesthetics, an unforgettable soundtrack, and Tommy Vercetti's compelling rise to power in the criminal underworld of excess and ambition. The game perfectly captured the essence of the 1980s with its music, fashion, and cultural references. Vice City expanded on GTA III's formula with motorcycles, helicopters, and property ownership. The voice acting, particularly by Ray Liotta as Tommy Vercetti, brought unprecedented personality to the protagonist.<div class='character-section'><div class='character-title'>Characters & Story</div><div class='character-info'><strong>Protagonist:</strong> Tommy Vercetti (voiced by Ray Liotta)</div><div class='character-info'><strong>Key Characters:</strong> Lance Vance (partner), Sonny Forelli (mob boss), Ricardo Diaz (drug lord), Ken Rosenberg (lawyer)</div><div class='character-info'><strong>Setting:</strong> Vice City, 1986 (based on Miami)</div><div class='character-info'><strong>Plot:</strong> Fresh out of prison, Tommy builds a criminal empire in Vice City after a drug deal goes wrong</div></div>">
+                            A nostalgic journey through 1980s Miami-inspired Vice City with vibrant neon aesthetics and Tommy Vercetti's rise to power.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 2')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PS2, PC, Xbox</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Action-adventure game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Action-Adventure</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">16.15 Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">80s Atmosphere</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_vc.png" alt="Grand Theft Auto Vice City">
+                    
+                </div>
+            </div>
+
+            <!-- San Andreas (2004) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2004</div>
+                    <h2 class="game-title">Grand Theft Auto: San Andreas</h2>
+                    <div class="developer">Developer: Rockstar North</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="The most ambitious GTA title spanning three major cities with extensive RPG elements and CJ's epic narrative." data-full="The most ambitious GTA title of its generation, spanning three major cities and vast countryside areas. Introduced extensive RPG elements, character customization, and CJ's epic narrative of family loyalty set in 1990s California. The game featured Los Santos, San Fierro, and Las Venturas, plus rural areas between them. Players could customize CJ's appearance, build muscle or fat, learn new fighting moves, and pilot aircraft. The story tackled serious themes including gang violence, police corruption, and family dynamics.<div class='character-section'><div class='character-title'>Characters & Story</div><div class='character-info'><strong>Protagonist:</strong> Carl 'CJ' Johnson (voiced by Young Maylay)</div><div class='character-info'><strong>Grove Street Families:</strong> Sweet (brother), Big Smoke, Ryder</div><div class='character-info'><strong>Key Characters:</strong> Officer Tenpenny (corrupt cop), Catalina (girlfriend), Woozie (Triad leader)</div><div class='character-info'><strong>Setting:</strong> San Andreas, 1992 (based on California and Nevada)</div><div class='character-info'><strong>Plot:</strong> CJ returns to Los Santos after his mother's murder to rebuild the Grove Street Families</div></div>">
+                            The most ambitious GTA title spanning three major cities with extensive RPG elements and CJ's epic narrative.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 2')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PS2, PC, Xbox</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Action-adventure game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Action-Adventure</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">17.33 Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">RPG Elements</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_sa.png"alt="Grand Theft Auto San Andreas"
+                <div></div>
+                </div>
+            </div>
+
+            <!-- GTA 4 (2008) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2008</div>
+                    <h2 class="game-title">Grand Theft Auto IV</h2>
+                    <div class="developer">Developer: Rockstar North</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="A triumphant return to Liberty City with groundbreaking HD graphics and Niko Bellic's darker exploration of the American Dream." data-full="A triumphant return to Liberty City with groundbreaking HD graphics and realistic physics. Niko Bellic's story explores themes of the American Dream through a darker, more mature lens with enhanced AI and multiplayer capabilities. The game introduced the RAGE engine, delivering unprecedented realism in character animations, vehicle physics, and environmental destruction. The narrative took a more serious tone, exploring themes of immigration, morality, and the cost of violence.<div class='character-section'><div class='character-title'>Characters & Story</div><div class='character-info'><strong>Protagonist:</strong> Niko Bellic (voiced by Michael Hollick)</div><div class='character-info'><strong>Family:</strong> Roman Bellic (cousin), Kate McReary (love interest)</div><div class='character-info'><strong>Key Characters:</strong> Little Jacob (friend), Brucie Kibbutz, Dimitri Rascalov (antagonist)</div><div class='character-info'><strong>Setting:</strong> Liberty City, 2008 (redesigned New York City)</div><div class='character-info'><strong>Plot:</strong> Serbian immigrant Niko searches for the American Dream while confronting his violent past</div></div>">
+                            A triumphant return to Liberty City with groundbreaking HD graphics and Niko Bellic's darker exploration of the American Dream.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 3')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PS3, Xbox 360, PC</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Action-adventure game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Action-Adventure</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">25+ Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">RAGE Engine</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_4.png" alt="Grand Theft Auto IV">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red Dead Redemption (2010) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2010</div>
+                    <h2 class="game-title">Red Dead Redemption</h2>
+                    <div class="developer">Developer: Rockstar San Diego</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="Rockstar's masterful interpretation of the American Wild West with John Marston's quest for redemption." data-full="Rockstar's masterful interpretation of the American Wild West. John Marston's quest for redemption unfolds against the backdrop of a dying frontier, combining emotional storytelling with expansive open-world exploration. Set in 1911, the game captures the end of the Wild West era as civilization encroaches on the lawless frontier. The game featured horseback riding, gunfights, hunting, and a morality system. The vast landscape included deserts, plains, and small frontier towns. Its emotional ending became one of gaming's most memorable moments.<div class='character-section'><div class='character-title'>Characters & Story</div><div class='character-info'><strong>Protagonist:</strong> John Marston (voiced by Rob Wiethoff)</div><div class='character-info'><strong>Family:</strong> Abigail Marston (wife), Jack Marston (son)</div><div class='character-info'><strong>Key Characters:</strong> Dutch van der Linde (former gang leader), Bill Williamson, Javier Escuella, Edgar Ross (federal agent)</div><div class='character-info'><strong>Setting:</strong> American frontier, 1911</div><div class='character-info'><strong>Plot:</strong> Former outlaw John Marston hunts down his old gang members to save his family</div></div>">
+                            Rockstar's masterful interpretation of the American Wild West with John Marston's quest for redemption.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 3')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PS3, Xbox 360</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Western (genre)')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Western/Action</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">15+ Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">Western Setting</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/rdr_1.png" alt="Red Dead Redemption 1 Remastered">
+                    </div>
+                </div>
+            </div>
+
+            <!-- GTA 5 (2013) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2013</div>
+                    <h2 class="game-title">Grand Theft Auto V</h2>
+                    <div class="developer">Developer: Rockstar North</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="The most successful entertainment product in history featuring three protagonists and the massive city of Los Santos." data-full="The most successful entertainment product in history. Featuring three distinct protagonists, the massive city of Los Santos, and incredible attention to detail. A cultural phenomenon that continues to evolve and thrive. The game revolutionized open-world design with seamless character switching, allowing players to experience the story from multiple perspectives. Los Santos became the most detailed virtual city ever created. The game's satire of modern American culture was sharper than ever, covering everything from social media to corporate greed.<div class='character-section'><div class='character-title'>Characters & Story</div><div class='character-info'><strong>Protagonists:</strong> Michael De Santa, Franklin Clinton, Trevor Philips</div><div class='character-info'><strong>Voice Actors:</strong> Ned Luke, Shawn Fonteno, Steven Ogg</div><div class='character-info'><strong>Key Characters:</strong> Lamar Davis, Amanda De Santa, Lester Crest (heist planner)</div><div class='character-info'><strong>Setting:</strong> Los Santos and Blaine County, 2013 (based on Los Angeles)</div><div class='character-info'><strong>Plot:</strong> Three criminals from different backgrounds unite for increasingly dangerous heists</div></div>">
+                            The most successful entertainment product in history featuring three protagonists and the massive city of Los Santos.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 4')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">Multi-Gen</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Action-adventure game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Action-Adventure</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">190+ Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">3 Protagonists</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_5.png" alt="Grand Theft Auto 5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- GTA Online (2013) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2013</div>
+                    <h2 class="game-title">Grand Theft Auto Online</h2>
+                    <div class="developer">Developer: Rockstar North</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="The persistent online evolution of Los Santos that transformed multiplayer gaming with continuous content updates." data-full="The persistent online evolution of Los Santos that transformed multiplayer gaming. With continuous content updates, heists, businesses, and social experiences, it has maintained an active community for over a decade. GTA Online became a platform for ongoing content, regularly receiving major updates that add new areas, vehicles, activities, and storylines. Players can own properties, run businesses, participate in races, engage in PvP combat, or simply socialize in the massive shared world. Its success has redefined what a multiplayer experience can be.<div class='character-section'><div class='character-title'>Game Information</div><div class='character-info'><strong>Player Character:</strong> Customizable protagonist</div><div class='character-info'><strong>Key NPCs:</strong> Lester Crest, Martin Madrazo, Simeon Yetarian, Lamar Davis</div><div class='character-info'><strong>Setting:</strong> Los Santos and surrounding areas (continuously expanding)</div><div class='character-info'><strong>Features:</strong> Heists, businesses, racing, PvP combat, social activities, regular content updates</div></div>">
+                            The persistent online evolution of Los Santos that transformed multiplayer gaming with continuous content updates.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Online game')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">Multi-Platform</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Massively multiplayer online game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Online Multiplayer</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Players</div>
+                            <div class="stat-value">30 per Session</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">Live Service</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_online.png" alt="Grand Theft Auto Online">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red Dead Redemption 2 (2018) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2018</div>
+                    <h2 class="game-title">Red Dead Redemption 2</h2>
+                    <div class="developer">Developer: Rockstar Studios (Worldwide Collaboration)</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="Rockstar's magnum opus featuring Arthur Morgan's story with unprecedented detail and the most immersive open world ever created." data-full="Rockstar's magnum opus and technical masterpiece. Arthur Morgan's story within the Van der Linde gang showcases unprecedented detail, emotional depth, and the most immersive open world ever created in gaming. Set as a prequel to the original Red Dead Redemption, the game explores the decline of the Wild West and the gang's struggle against the encroaching modern world. Every aspect feels alive, from realistic animal behavior to dynamic weather systems. Arthur Morgan's character development is masterfully crafted, making players genuinely care about his fate.<div class='character-section'><div class='character-title'>Characters & Story</div><div class='character-info'><strong>Protagonist:</strong> Arthur Morgan (voiced by Roger Clark)</div><div class='character-info'><strong>Van der Linde Gang:</strong> Dutch van der Linde (leader), Hosea Matthews, John Marston, Micah Bell</div><div class='character-info'><strong>Key Characters:</strong> Sadie Adler, Charles Smith, Abigail Roberts, Jack Marston</div><div class='character-info'><strong>Setting:</strong> American frontier, 1899 (prequel to RDR1)</div><div class='character-info'><strong>Plot:</strong> Arthur Morgan and the Van der Linde gang struggle to survive as outlaws in a changing world</div></div>">
+                            Rockstar's magnum opus featuring Arthur Morgan's story with unprecedented detail and the most immersive open world ever created.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 4')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PS4, Xbox One, PC</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Western (genre)')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Western/Action</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">50+ Million</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">Ultimate Realism</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/rdr_2.png" alt="RED DEAD REDEMPTION 2">
+                    
+                </div>
+            </div>
+
+            <!-- GTA 6 (2026) -->
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="year-badge">2026</div>
+                    <h2 class="game-title">Grand Theft Auto VI</h2>
+                    <div class="coming-soon">Releasing May 26, 2026</div>
+                    <div class="developer">Developer: Rockstar Games</div>
+                    <div class="game-description">
+                        <div class="description-content description-preview" data-short="The most anticipated game of the decade returns to Vice City with cutting-edge technology and next-generation gameplay." data-full="The most anticipated game of the decade returns to Vice City with cutting-edge technology and next-generation gameplay. Featuring dual protagonists and revolutionary mechanics that promise to redefine open-world gaming once again. Set in a modern interpretation of Vice City and its surrounding areas, the game is expected to push the boundaries of what's possible in interactive entertainment. Early reports suggest the return of series staples like property ownership, business management, and multiple playable characters. The development has taken nearly a decade, suggesting an unprecedented level of detail and ambition.<div class='character-section'><div class='character-title'>Anticipated Features</div><div class='character-info'><strong>Protagonists:</strong> Dual protagonists (rumored to include a female lead)</div><div class='character-info'><strong>Setting:</strong> Modern Vice City and surrounding areas</div><div class='character-info'><strong>Expected Features:</strong> Next-gen graphics, advanced AI, expanded multiplayer integration</div><div class='character-info'><strong>Development:</strong> Nearly 10 years in development using cutting-edge technology</div></div>">
+                            The most anticipated game of the decade returns to Vice City with cutting-edge technology and next-generation gameplay.
+                        </div>
+                        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('PlayStation 5')">
+                            <div class="stat-label">Platform</div>
+                            <div class="stat-value">PS5, Xbox Series</div>
+                        </div>
+                        <div class="stat-item clickable" onclick="redirectToWikipedia('Action-adventure game')">
+                            <div class="stat-label">Genre</div>
+                            <div class="stat-value">Action-Adventure</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Sales</div>
+                            <div class="stat-value">Projected High</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Innovation</div>
+                            <div class="stat-value">Next-Gen Tech</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="/images/gta_6.png" alt="Grand Theft Auto 6">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3>The Legacy Continues</h3>
+            <p>From the pioneering top-down streets of Liberty City in 1997 to the sprawling, photorealistic worlds of today, Rockstar Games has consistently redefined interactive entertainment.</p>
+            <p>WEB DEVELOPMENT PROJECT — 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameCards = document.querySelectorAll('.game-card');
+            
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -80px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            gameCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(40px)';
+                card.style.transition = `opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s`;
+                observer.observe(card);
+            });
+
+            gameCards.forEach(card => {
+                const image = card.querySelector('.game-image img, .placeholder-image');
+                
+                card.addEventListener('mouseenter', function() {
+                    if (image) {
+                        image.style.transform = 'scale(1.02)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    if (image) {
+                        image.style.transform = 'scale(1)';
+                    }
+                });
+            });
+        });
+
+        function toggleDescription(button) {
+            const descriptionContent = button.parentElement.querySelector('.description-content');
+            const isExpanded = descriptionContent.classList.contains('description-full');
+            
+            if (isExpanded) {
+                descriptionContent.classList.remove('description-full');
+                descriptionContent.classList.add('description-preview');
+                descriptionContent.innerHTML = descriptionContent.dataset.short;
+                button.textContent = 'Read More';
+                
+                button.closest('.game-card').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            } else {
+                descriptionContent.classList.remove('description-preview');
+                descriptionContent.classList.add('description-full');
+                descriptionContent.innerHTML = descriptionContent.dataset.full;
+                button.textContent = 'Read Less';
+            }
+        }
+
+        function redirectToWikipedia(searchTerm) {
+            const baseUrl = 'https://en.wikipedia.org/wiki/';
+            const formattedTerm = searchTerm.replace(/ /g, '_');
+            window.open(baseUrl + formattedTerm, '_blank');
+        }
+    </script>
+</body>
+</html>
